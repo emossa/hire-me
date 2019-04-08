@@ -1,17 +1,19 @@
-#My Portfolio Wordpress Theme
+#Hire Me - Wordpress Theme
 
 A Wordpress Theme create by Emanuele Mossa
 
-DEMO: http://emanuelemossa.x10host.com/
+DEMO: www.emanuelemossa.info
 
 
 ##List of the features
 
 - Responsive
 - Custom Menu
-- Cover Image
+- SVG Image
 - Feataured Image
 - Post slider
+- Demo & Git Hub links with custom fields
+- Resume option with link
 
 
 ##Wordpress functionality
