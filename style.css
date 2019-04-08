@@ -1,0 +1,354 @@
+/*
+Theme Name: 	Hire Me
+Description: 	A responsive Wordpress template designed for Emanuele Mossa's portfolio.
+Version:     	1.0.0
+Author:     	Emanuele Mossa
+Author URI:   https://www.emanuelemossa.info
+Theme URI:    http://www.emanuelemossa.it
+Site:         https://www.emanuelemossa.info
+Text Domain: 	hireme
+Domain Path: 	/languages
+Tags:        	responsive, portfolio, svg, featured-images
+License:    	GNU General Public License v3.0
+License URI:	http://www.gnu.org/licenses/gpl-3.0.html
+*/
+
+body, html{ font-family: "Montserrat"; background: #eee; font-size: 16px; line-height: 2vw; overflow: -moz-scrollbars-none; -ms-overflow-style: none; }
+body::-webkit-scrollbar { width: 0 !important }
+
+
+/* ---------------------------- */
+/*         TYPOGRAPHY           */
+/* ---------------------------- */
+p,a{font-size: 1.4vw;}
+h1{font-size: 3vw}
+h2{font-size: 2vw;}
+h3{font-size: 1.8vw;}
+h4{font-size: 1.6vw;}
+h5{font-size: 1.4vw;}
+h6{font-size: 1.2vw;}
+
+/* ---------------------------- */
+/*         TYPOGRAPHY           */
+/* ---------------------------- */
+
+/*--------------------------
+General
+--------------------------*/
+
+hr{border:none; border-bottom: 1px solid #ddd}
+
+/* form  */
+input{border: 1px solid #ddd}
+input[type="submit"]{background: #333; color:#fff; border:none;width:70px;}
+input, textarea, select, button {
+  width : 150px;
+  margin: 0;
+  -webkit-box-sizing: border-box; /* For legacy WebKit based browsers */
+     -moz-box-sizing: border-box; /* For legacy (Firefox <29) Gecko based browsers */
+          box-sizing: border-box;
+}
+
+pre{overflow: hidden}
+
+/* Video Resposnive */
+figure{margin:0;}
+.video-container { position: relative; padding-bottom: 56.25%; /* 16:9 */ padding-top: 25px; height: 0;}
+.video-container  iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+
+
+/*--------------------------
+Layout
+--------------------------*/
+
+a{color:#21aabd;}
+a:hover{color:#ee52f4;}
+
+
+/* ---------------------------- */
+/*           HEADER             */
+/* ---------------------------- */
+.header-container{width: 100%; height: 100vh; display: flex; position: relative; justify-content: center;}
+.header-container__left{width: 50%; height: 100vh; background: white;}
+.header-container__right{width: 50%; height: 100vh; background: #f4eb4f;}
+.header-container__icon{display: flex; flex-direction: column; position: fixed; right: 20px; margin-top: 1vh; z-index: 100;}
+.header-container__icon span{ background-color: #000; height: 0.6vh; width: 3vw; margin:0.8vh 0; -webkit-transition: all 0.3s ease-out; transition: all 0.3s ease-out; }
+.dashone-open{ transform: rotate(50deg); transform-origin: center; position: fixed;right: 20px; top: 30px;}
+.dashtwo-open{ transform: rotate(135deg); transform-origin: center; position: fixed;right: 20px; top: 30px;}
+.dashthree-open{display: none}
+.header-container__sidemenu{position: fixed;  z-index: 100; right: 0; width: 0px; height: 100vh; background: grey;   -webkit-transition: all 0.3s ease-out; transition: all 0.3s ease-out;}
+.header-container__sidemenu ul {margin-top: 70px; text-align: center; padding: 0;}
+.header-container__sidemenu li {padding: 10px; list-style: none;}
+.header-container__sidemenu a{ text-decoration: none; color: white;  font-weight: bold;}
+.header-container__sidemenu a:hover{font-size: 2.1rem;}
+.menu-open{width:100vw; }
+.header-container__down{position: absolute; right: 30px; bottom: 50px; animation-name: bouncing__down; animation-duration: 1.5s; animation-iteration-count: infinite;}
+.header-container__down img{width: 8vw; height: auto; }
+.header-container__resume{position: absolute; left:10vw ; top: 20vh; animation-name: bouncing__resume; animation-duration: 1.5s; animation-iteration-count: infinite;}
+.header-container__resume img{width: 13vw; height: auto; }
+.header-container__caption{ width: auto; height: 100%; margin: 0 auto; position: absolute;}
+
+@keyframes bouncing__down {
+    0%   {bottom: 50px;}
+    50%  {bottom: 20px;}
+    100% {bottom: 50px;}
+}
+ @keyframes bouncing__resume {
+
+    0%   {top: 20vh;}
+    50%  {top: 22vh;}
+    100% {top: 20vh;}
+}
+
+/* ---------------------------- */
+/*           HEADER             */
+/* ---------------------------- */
+
+
+
+
+/*SWIPER BEGIN*/
+.swiper-container {background: #ff3b3a; width: 100%; height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding-top: 50px; padding-bottom: 50px; background-size: cover; background-position: center;}
+.swiper-wrapper{align-items: center;  }
+.swiper-slide {background-color: white; width: 25vw; height: 70vh; position: relative;}
+.swiper-slide article{padding: 0;}
+.post__featured-image {display: block; width: 25vw; height:27vh; background-position: center; background-size: cover; margin-top: 20px;}
+.post__info{display: flex; flex-direction: column; align-items: center; justify-content: center; height: 33vh;}
+.post__info a {text-decoration: none; color: #3a48ff;}
+.post__info__datas{margin: 0; padding: 5px; color: black;}
+.post__info__links__icon{height: 3vw; padding: 2vw;}
+/* SWIPER END */
+
+
+
+/*--------------------------
+Index, Single, Page
+--------------------------*/
+
+.content{width: 100%}
+.content__title{font-size: 42px;}
+
+	/* .post{padding:40px; border-bottom: 1px solid #eee;} */
+  /* .post img{max-width: 100%; height: auto;} */
+	.content .page{width:65%; margin: 40px auto; }
+  .content .content__post__singolo{width:65%; margin: 40px auto; }
+  .content .tag {margin-top:40px;}
+	.content .tag a{background: #666; color:#fff; padding:5px 10px; text-decoration: none; display: inline-block;;margin-top:5px;font-size: 12px;}
+  .page__featured-image{display: block; width: 100%; height: 40vh; background-position: center; background-size: cover; display: flex; justify-content: center; align-items: center;}
+  .page__filter{width: 100%; height: 40vh; position: absolute; background-color: black; opacity: 0.4;}
+  .page__featured-image a{position: relative; color: white; text-decoration: none;}
+
+
+	/* Comments */
+	.comments{margin: 40px 0; border-top: 1px solid #eee}
+	.commentlist,
+	.commentlist .children{list-style-type: none}
+
+	.comment-body{margin: 40px 0}
+	.comment-author.vcard img{border-radius: 100%;}
+
+	.comment-form-comment textarea{background: #eee; width:100%;border: 1px solid #ddd;margin-top:5px;}
+	.comment-form-author input,
+	.comment-form-email input,
+	.comment-form-url input{background: #eee; width:200px; max-width:300px;border: 1px solid #ddd;padding:5px}
+
+	.comment-form-author label,
+	.comment-form-email label,
+	.comment-form-url label{ width:100px;display: inline-block;}
+
+	.form-submit input{background: #333; color:#fff; border:none;font-size: 16px;padding: 10px 15px;width: auto;}
+
+  /* Pagination */
+  .pagination{padding:40px;}
+  .pagination a,
+  .pagination span{padding: 10px 15px; border: 1px solid #ddd; text-decoration: none;}
+  .pagination a:hover{background: #eee}
+
+  /* Caption Images */
+  .wp-caption { margin-bottom: 20px; padding: 10px; max-width: 97%; border: 1px solid #ddd; text-align: center; }
+  .wp-caption img { margin: 0; padding: 0; width: 100%!important; height: auto; border: 0 none; }
+  .wp-caption p.wp-caption-text { margin: 0; padding: 8px; font-size: 1em; line-height: 17px; }
+
+  /* Gallery */
+  .gallery { padding: 40px 0 40px 0; width: 100%; }
+  .gallery-item { float: left; width: 33.333333%; text-align: center; }
+  .gallery img { margin: 0 5% 0 5%; width: 90%; height: auto; border: none!important; }
+  .gallery-caption { width: 90%;margin:10px 0 0 0;}
+
+
+/*--------------------------
+Sidebar
+--------------------------*/
+
+.sidebar{width:100%; display: flex; flex-direction: column;  background: #3a48ff; color: white;}
+.sidebar a{text-decoration: underline; color: white;}
+.sidebar a:hover{color: grey;}
+
+	.widget{padding:40px; display: flex; flex-direction: column; justify-content: center; margin: 0 auto;}
+	.widget ul{padding: 0;list-style-type: none;}
+	.widget ul li {text-decoration: none; display: block; }
+
+	.widget_search label{display: block;}
+  .searchform input {margin-top: 15px;}
+
+footer{padding:10px 30px; color: white; background: black;}
+
+/*--------------------------
+Tablet
+--------------------------*/
+
+@media only screen and (orientation: portrait){
+
+  /* ---------------------------- */
+  /*         TYPOGRAPHY           */
+  /* ---------------------------- */
+  html,body{line-height: 5.5vw }
+  p,a{font-size: 4vw;}
+  h1{font-size: 9vw}
+  h2{font-size: 7vw;}
+  h3{font-size: 5vw;}
+  h4{font-size: 4.5vw;}
+  h5{font-size: 3.5vw;}
+  h6{font-size: 3vw;}
+
+  /* ---------------------------- */
+  /*         TYPOGRAPHY           */
+  /* ---------------------------- */
+  /* ---------------------------- */
+  /*           HEADER             */
+  /* ---------------------------- */
+.header-container__caption{height: 35vh; width: auto; top: 8vh;}
+.header-container__resume{top: 40vh; left: 0; width: 100vw; display: flex; justify-content: center; animation-name:bouncing__resume__mobile;}
+.header-container__resume img{width: 30vw; height: auto;}
+.header-container__down{bottom: 0vh; left: 0; width: 100vw; height: 150px; display: flex; justify-content: center; animation-name:bouncing__down__mobile; }
+.header-container__down img{width: 20vw; height: auto;}
+.header-container__icon span{width: 10vw;}
+
+@keyframes bouncing__down__mobile {
+    0%   {bottom: 0px;}
+    50%  {bottom: -20px;}
+    100% {bottom: 0px;}
+}
+ @keyframes bouncing__resume__mobile {
+
+    0%   {top: 50vh;}
+    50%  {top: 55vh;}
+    100% {top: 50vh;}
+}
+  /* ---------------------------- */
+  /*           HEADER             */
+  /* ---------------------------- */
+
+
+  /* ---------------------------- */
+  /*           SWIPER             */
+  /* ---------------------------- */
+  .swiper-slide{width: 60vw; height: 50vh;}
+  .post__featured-image{width: 60vw; height: 20vh;}
+  .post__info__links__icon{height: 6vw;}
+  /* ---------------------------- */
+  /*           SWIPER             */
+  /* ---------------------------- */
+}
+
+
+
+
+
+
+@media (max-width: 998px) {
+
+
+   /* content layout */
+ 	.main-title{font-size: 32px;}
+ 	.content,
+ 	.sidebar{width:100%;}
+  .content .page{width: 95%}
+  .content .page h1{font-size: 1.5rem;}
+  .page__featured-image a{position: relative; color: white; text-decoration: none;}
+  .page__featured-image .content__title{font-size: 1.5rem;}
+  .content .content__post__singolo{ width: 95%;}
+
+   /* Gallery */
+   .gallery-caption{ font-size: 12px;}
+
+   /* SIDEBAR */
+
+   .sidebar{flex-direction: column;}
+}
+
+
+
+
+
+
+/* WORDPRESS CLASSES */
+.sticky {	display: block; }
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	clip-path: none;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
+	/* Above WP toolbar. */
+}
+
+.bypostauthor {	display: block; }
+
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+/* Clearfix */
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+	}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
